@@ -1,0 +1,33 @@
+<div class="row oner">
+  <div class="oner">
+    <h2>Edit Your Post</h2>
+  </div>
+</div>
+{{#each posts}}
+  <form width="100%" class="editpost"><label><h3>Post Title</h3></label><br />
+    <input
+      class="postid"
+      type="number"
+      width="300px"
+      id="pstid"
+      value="{{id}}"
+    />
+    <input
+      class="post-title-input"
+      type="text"
+      width="300px"
+      id="ptinput"
+      value="{{title}}"
+    /><br /><label><h3>Post Content</h3></label><br />
+    <textarea
+      class="post-title-input"
+      type="text"
+      cols="40"
+      rows="5"
+      id="pstcnt"
+    >{{content}} {{category.catname}}</textarea><br /><button
+      type="submit"
+      class="btn btn-primary"
+    >Post</button></form>{{/each}}
+
+<script src="/js/edit.js"></script>
